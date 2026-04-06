@@ -1,0 +1,3 @@
+[submodule "hw/mempool"]
+	path = hw/mempool
+	url = https://github.com/SiliconLanguage/mempool.git
