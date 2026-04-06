@@ -29,6 +29,16 @@ cd m-ipc
 
 Refer to `BUILD_GUIDE.md` for detailed build and simulation steps.
 
+## Optional Hardware Simulator Submodule
+
+If you want to pull in the full MemPool hardware simulator alongside this standalone data-plane repository, initialize the optional submodule:
+
+```bash
+git submodule update --init --recursive hw/mempool
+```
+
+This will populate `hw/mempool` using the URL defined in `.gitmodules`.
+
 ## Origin
 
 This repository contains the extracted history of `software/mempool-ipc/` from the upstream MemPool monorepo, merged with bootstrap files prepared in `m-ipc`.
