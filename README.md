@@ -6,17 +6,18 @@ A bare-metal, hardware-assisted messaging framework built for massively parallel
 
 `m-ipc` is the standalone software data plane extracted from the [MemPool](https://github.com/SiliconLanguage/mempool) hardware simulator. It provides lock-free inter-process communication primitives and message-passing infrastructure designed for many-core RISC-V systems.
 
+This repository now contains only the extracted data-plane components and documentation needed to build and validate the IPC stack independently.
+
 ## Repository Structure
 
 ```text
 m-ipc/
+├── BUILD_GUIDE.md                        # End-to-end build and simulation notes
 ├── docs/                                 # Architecture, run books, and routing notes
 ├── dataplane-emu/                        # C++ host/offload data-plane emulation
 ├── phase0_c/                             # Ground-truth C implementation
 ├── phase1_rust/                          # no_std Rust implementation
-├── hw/
-│   └── mempool/                          # MemPool simulator submodule
-└── ...
+└── README.md
 ```
 
 ## Getting Started
@@ -24,10 +25,9 @@ m-ipc/
 ```bash
 git clone https://github.com/SiliconLanguage/m-ipc.git
 cd m-ipc
-git submodule update --init --recursive
 ```
 
-Refer to `BUILD_GUIDE.md` for hardware simulation build steps.
+Refer to `BUILD_GUIDE.md` for detailed build and simulation steps.
 
 ## Origin
 
